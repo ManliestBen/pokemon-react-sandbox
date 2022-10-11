@@ -1,4 +1,5 @@
 import './App.css';
+import User from './components/User/User';
 
 function App() {
   const users = [
@@ -235,7 +236,9 @@ function App() {
   ]
   return (
     <>
-      
+      {users.map(user =>
+        <User key={user.id} user={user} />
+      )}
     </>
   );
 }
